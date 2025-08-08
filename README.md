@@ -32,3 +32,5 @@
 - Navbar should should be updated as soon as user login in 
 - Refacter of our code to add constants file + create a component folder.
 
+- you should not be access to the other routers without login 
+-  if the token is not present so it redirects to the login page.
