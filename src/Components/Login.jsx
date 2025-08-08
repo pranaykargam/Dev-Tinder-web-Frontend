@@ -15,6 +15,7 @@ const Login = () => {
   const [password, setPassword] = useState("Virat@1234");
   const dispatch  = useDispatch();
   const navigate = useNavigate();
+  const [error, setError] = useState(null); // State to hold error messages
 
   const handleLogin = async () => {
     try {
@@ -28,7 +29,8 @@ const Login = () => {
       dispatch(addUser(res.data.user)); //  you have an action creator named addUser
       return navigate("/"); // Navigate to profile page after successful login
     } catch (error) {
-      console.error("Login failed:", error);
+    
+      setError(error?.response?.data?.message || "Login failed. Please try again.");
     }
   };
 
@@ -59,9 +61,11 @@ const Login = () => {
               />
             </fieldset>
           </div>
-
+<p className='text-red-500'>{error}</p>
           <div className="card-actions mt-6">
+
             <button
+
               className="btn btn-primary w-full hover:scale-105 transition-transform duration-200"
               onClick={handleLogin}
             >
