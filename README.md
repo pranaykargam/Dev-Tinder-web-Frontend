@@ -34,3 +34,5 @@
 
 - you should not be access to the other routers without login 
 -  if the token is not present so it redirects to the login page.
+
+- Build the /logout feature
