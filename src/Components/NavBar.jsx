@@ -8,6 +8,7 @@ import { removeUser } from '../utilis/userSlice';
 
 
 
+
 const NavBar = () => {
   const user = useSelector((store) => store.user);
   const navigate  = useNavigate();
@@ -51,7 +52,7 @@ const NavBar = () => {
                 Profile <span className="badge">New</span>
               </Link>
             </li>
-            <li><a >Settings</a></li> 
+            <Link to ="/Connections">Connections</Link>
             <li><a onClick={handleLogout}>Logout</a></li>
           </ul>
         </div>

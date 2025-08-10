@@ -36,3 +36,11 @@
 -  if the token is not present so it redirects to the login page.
 
 - Build the /logout feature
+
+- get the feed and add in the store
+- build the userCard component
+
+- Edit profile Feature
+- Show Toast Message on save of the profile
+
+- see all my connections

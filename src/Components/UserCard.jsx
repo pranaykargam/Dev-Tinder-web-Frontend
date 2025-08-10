@@ -1,13 +1,13 @@
 import React from 'react'
 
-export const UserCard = ({ user }) => {
-  const { firstName, lastName, about, age, gender, photourl } = user;
+const UserCard = ({ user }) => {
+  const { firstName, lastName, about, age, gender, photoUrl } = user;
 
   return (
     <div className="card bg-base-100 w-96 shadow-xl border border-gray-300 rounded-lg overflow-hidden">
       <figure className="h-74 bg-gray-100"> 
         <img
-          src={photourl}
+          src={photoUrl}
           alt="photo"
           className="w-full h-full object-cover"
         />

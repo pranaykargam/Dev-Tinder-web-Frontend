@@ -1,6 +1,6 @@
 // rafce
 
-import React, { use } from 'react'
+import React from 'react'
 import NavBar from './NavBar'
 import { Outlet } from 'react-router-dom'
 import Footer from './Footer'
@@ -40,7 +40,7 @@ dispatch (addUser(res.data));
     fetchUser();
   },[])
   return (
-<div>
+<div className='flex flex-col min-h-screen'>
      <NavBar/>
      <Outlet/>
      <Footer/>
