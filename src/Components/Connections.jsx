@@ -37,7 +37,12 @@ if (!connections) {
   }
   
   if (connections.length === 0) {
-    return <h1 className="text-bold text-2xl">No Connections Found</h1>;
+    return (
+      <h1 className="font-serif text-lg text-gray-300 tracking-wide">
+        No Connections Found
+      </h1>
+    );
+    
   }
   
  
@@ -47,18 +52,18 @@ if (!connections) {
   return (
 
 
-<div className="max-w-6xl mx-auto my-10 px-4">
-<h1 className="font-serif text-3xl tracking-wide text-center text-white drop-shadow-md mb-8">
+<div className=" mx-auto  text-center my-10 ">
+<h1 className="font-serif text-3xl  gap-1tracking-wide text-center text-white drop-shadow-md mb-6">
   Connections
 </h1>
 
 
-  <div className="grid gap-6  ">
+  <div className="grid gap-1  ">
   {connections.map((connection) => {
-    const {  firstName, lastName, photoUrl, about,age ,gender} = connection;
+    const { _id, firstName, lastName, photoUrl, about,age ,gender} = connection;
 
     return (
-      <div
+      <div key={_id}
       className="
       flex items-center justify-between
       bg-gradient-to-r from-[#1e293b] via-[#0f172a] to-[#020617]
@@ -66,11 +71,13 @@ if (!connections) {
       rounded-3xl
       m-4 p-4
      w-[550px]
+     gap-2
+     mx-auto
 
       border border-cyan-400/30 hover:border-cyan-100
       transition-all duration-300 ease-in-out
       transform hover:-translate-y-1 hover:scale-[1.02]
-      text-white mx-auto
+      text-white 
     "
       >
         {/* Left side - Profile Image */}

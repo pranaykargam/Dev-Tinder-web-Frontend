@@ -43,4 +43,5 @@
 - Edit profile Feature
 - Show Toast Message on save of the profile
 
-- see all my connections
+- create a page to "see all my connections"
+- create a page to "see all my connections requests"

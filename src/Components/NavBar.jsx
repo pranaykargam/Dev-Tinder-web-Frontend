@@ -48,12 +48,41 @@ const NavBar = () => {
             className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mt-3 z-[1]"
           >
             <li>
-              <Link to = "/profile" className="justify-between">
-                Profile <span className="badge">New</span>
-              </Link>
-            </li>
-            <Link to ="/Connections">Connections</Link>
-            <li><a onClick={handleLogout}>Logout</a></li>
+  <Link
+    to="/profile"
+    className="flex items-center justify-between px-4 py-2 rounded-lg hover:bg-cyan-900/30 transition-colors duration-200"
+  >
+    Profile <span className="badge badge-accent ml-2">New</span>
+  </Link>
+</li>
+
+<li>
+  <Link
+    to="/connections"
+    className="flex items-center justify-between px-4 py-2 rounded-lg hover:bg-cyan-900/30 transition-colors duration-200"
+  >
+    Connections <span className="badge "></span>
+  </Link>
+</li>
+
+<li>
+  <Link
+    to="/requests"
+    className="flex items-center justify-between px-4 py-2 rounded-lg hover:bg-cyan-900/30 transition-colors duration-200"
+  >
+     Requests <span className="badge "></span>
+  </Link>
+</li>
+
+<li>
+  <button
+    onClick={handleLogout}
+    className="w-full text-left px-4 py-2 rounded-lg hover:bg-red-500/20 transition-colors duration-200"
+  >
+    Logout
+  </button>
+</li>
+
           </ul>
         </div>
       )}

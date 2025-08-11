@@ -9,7 +9,7 @@ import appStore from "./utilis/appStore";
 import Feed from "./Components/Feed";
 import EditProfile from "./Components/EditProfile";
 import Connections from "./Components/Connections";
-import requests from "./Components/requests";
+import Requests from "./Components/Requests";
 
 
 
@@ -29,7 +29,7 @@ function App() {
   <Route path="/profile" element={<Profile/>}/>
   <Route path="/editprofile" element={<EditProfile/>}/>
   <Route path="/Connections"element={<Connections/>}/>
-  <Route path="/requests"element={<requests/>}/>
+  <Route path="/requests"element={<Requests/>}/>
 
   </Route>
    </Routes>
