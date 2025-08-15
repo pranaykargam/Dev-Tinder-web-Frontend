@@ -45,3 +45,8 @@
 
 - create a page to "see all my connections"
 - create a page to "see all my connections requests"
+
+- feature - accept/reject connection request //// pending 
+
+- send/ignore the user card from Feed
+-  signup new User
