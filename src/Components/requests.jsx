@@ -7,15 +7,35 @@ import { useSelector } from 'react-redux'
 import { addRequests } from '../utilis/requestSlice'
 
 
+
 const Requests = () => {
   const requests = useSelector(store => store.requests)
   const dispatch = useDispatch()
+
+  const reviewRequest= async(status,_id) => {
+    try{
+       const res =  await axios.post(
+        BASE_URL + "/request/review/" + status + "/" + _id,
+        {},
+        { withCredentials: true },
+   
+   
+       )
+       console.log("Review request response:", res.data); 
+       fetchRequests()
+    }catch(err){
+      console.error("ERROR");
+    }
+  }
 
   const fetchRequests = async () => {
     try {
       const res = await axios.get(BASE_URL + "/user/requests/received", {
         withCredentials: true,
+        
+     
       })
+      console.log("Fetched requests data:", res.data.data); 
       dispatch(addRequests(res.data.data)) // ✅ Store data in Redux
     } catch (err) {
       console.error("ERROR", err)
@@ -82,10 +102,10 @@ const Requests = () => {
   <p className="text-xs text-gray-300 "> {about}</p>
 </div>
 <div className="flex gap-2">
-  <button className="btn btn-success btn-sm rounded-full shadow-md hover:shadow-lg transition">
-    Accept
-  </button>
-  <button className="btn btn-error btn-sm rounded-full shadow-md hover:shadow-lg transition">
+  <button className="btn btn-success btn-sm rounded-full shadow-md hover:shadow-lg transition" onClick={()=>reviewRequest("accepted", request._id) }> 
+    Accept 
+    </button>
+  <button className="btn btn-error btn-sm rounded-full shadow-md hover:shadow-lg transition" onClick={()=>reviewRequest("rejected", request._id) }>
     Reject
   </button>
 </div>

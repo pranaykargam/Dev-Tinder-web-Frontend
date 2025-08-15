@@ -33,7 +33,7 @@ useEffect(() => {
 },  [])
 
 if (!connections) {
-    return <h1 className="text-bold text-2xl">Loading...</h1>;
+    return <h1 className="font-serif text-xl">Loading...</h1>;
   }
   
   if (connections.length === 0) {

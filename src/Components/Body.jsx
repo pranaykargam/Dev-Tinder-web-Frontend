@@ -40,11 +40,14 @@ dispatch (addUser(res.data));
     fetchUser();
   },[])
   return (
-<div className='flex flex-col min-h-screen'>
-     <NavBar/>
-     <Outlet/>
-     <Footer/>
-</div>
+    <div className="flex flex-col min-h-screen">
+    <NavBar />
+    {/* Main content grows to push footer down */}
+    <main className="flex-grow">
+      <Outlet />
+    </main>
+    <Footer />
+  </div>
   
   )
 }
