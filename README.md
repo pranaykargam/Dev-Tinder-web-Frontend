@@ -50,3 +50,19 @@
 
 - send/ignore the user card from Feed
 -  signup new User
+
+
+## Deployment 
+
+- Sign up AWS
+- Launch Instance 
+- // this steps are followed in terminal  after {cd Download } in terminal.
+
+- Download Node.js in the terminal by adding the following commands: 
+- 01. curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+- 02. nvm install 22 (this 22 verison in the node.js but we change the version acccording to the project, in my project it was 24.1.0 )
+-  we can see the version  by adding node -v in the vsCode terminal.
+
+-  Next git Clone by adding the following commands in the terminal ; 
+-  01. git clone ---(paste the github backend code link here)
+-  02. git clone --- (paste the github frontend code link here)
