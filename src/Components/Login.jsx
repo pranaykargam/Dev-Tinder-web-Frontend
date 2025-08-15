@@ -171,16 +171,6 @@ const res = await axios.post(BASE_URL + "/signup", {
 
 export default Login
 
-// export default Login
 
-
-
-// export default Login
-// export default Login
-// export default Login
-// export default Login
-// export default Login
-// export default Login
-// export default Login
 
 
