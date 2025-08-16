@@ -57,6 +57,7 @@
 - Sign up AWS
 - Launch Instance 
 - // this steps are followed in terminal  after {cd Download } in terminal.
+ssh -i "DevTinder.pem" ubuntu@ec2-51-21-224-101.eu-north-1.compute.amazonaws.com
 
 - Download Node.js in the terminal by adding the following commands: 
 - 01. curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
