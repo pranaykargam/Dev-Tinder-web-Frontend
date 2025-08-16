@@ -10,7 +10,7 @@ import {Provider} from "react-redux";
 import appStore from "./utilis/appStore";
 import Feed from "./Components/Feed";
 import EditProfile from "./Components/EditProfile";
-import connections from "./Components/connections.jsx";
+import Connections from "./Components/connections.jsx";
 import Requests from "./Components/Requests";
 
 
