@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom'
 
 
 
-const connections = () => {
+const Connections = () => {
     const connections = useSelector((store) => store.connections)
     const dispatch = useDispatch()
 
@@ -109,4 +109,4 @@ if (!connections) {
   )
 }
 
-export default connections
+export default Connections
