@@ -3,7 +3,7 @@ import NavBar from "./Components/NavBar";
 import Body from "./Components/Body";
 import Login from "./Components/Login";
 
-import Profile from "./Components/Profile"
+import Profile from "./Components/Profile.jsx"
 
 import Footer from "./Components/Footer";
 import {Provider} from "react-redux";
