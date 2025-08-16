@@ -56,8 +56,10 @@
 
 - Sign up AWS
 - Launch Instance 
+
 - // this steps are followed in terminal  after {cd Download } in terminal.
-ssh -i "DevTinder.pem" ubuntu@ec2-51-21-224-101.eu-north-1.compute.amazonaws.com
+- 01. chmod 400 DevTinder.pem
+- 02. ssh -i "DevTinder.pem" ubuntu@ec2-51-21-224-101.eu-north-1.compute.amazonaws.com
 
 - Download Node.js in the terminal by adding the following commands: 
 - 01. curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
@@ -67,3 +69,17 @@ ssh -i "DevTinder.pem" ubuntu@ec2-51-21-224-101.eu-north-1.compute.amazonaws.com
 -  Next git Clone by adding the following commands in the terminal ; 
 -  01. git clone ---(paste the github backend code link here)
 -  02. git clone --- (paste the github frontend code link here)
+
+- ls
+- For Frontend
+- cd (/Dev-Tinder-web-Frontend) the name which you have given in the git clone command
+- npm i
+- npm run build
+- sudo apt update
+- sudo apt install nginx
+- sudo systemctl start nginx
+- sudo systemctl enable nginx
+- copy code from dist (build files) to  /var/www/html 
+- sudo scp -r dist/* /var/www/html
+
+- Enable port :80 of your instance in the AWS security group
