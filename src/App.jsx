@@ -2,7 +2,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import Body from "./Components/Body";
 import Login from "./Components/Login";
+
 import Profile from "./Components/Profile"
+
 import Footer from "./Components/Footer";
 import {Provider} from "react-redux";
 import appStore from "./utilis/appStore";
