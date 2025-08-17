@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { BASE_URL } from '../utilis/constants';
 import { addFeed, removeUserFromFeed } from '../utilis/feedSlice';
 import UserCard from './UserCard';
+import api from '../utilis/api'; // import the Axios instance
+
 
 const Feed = () => {
   const feed = useSelector((store) => store.feed);
@@ -12,9 +14,7 @@ const Feed = () => {
   const getFeed = async () => {
     if (feed) return; // don't refetch if already loaded
     try {
-      const res = await axios.get(BASE_URL + "/user/feed", {
-        withCredentials: true,
-      });
+      const res = await axios.get("/feed", { withCredentials: true });
       dispatch(addFeed(res.data));
     } catch (err) {
       console.error("Error fetching feed:", err);

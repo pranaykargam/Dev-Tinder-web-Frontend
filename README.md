@@ -83,3 +83,39 @@
 - sudo scp -r dist/* /var/www/html
 
 - Enable port :80 of your instance in the AWS security group
+
+- Backend
+
+- allowed ec2 instance public IP on MongoDB Atlas.
+- npm i pm2 -g
+- pm2 start npm --name "DevTinder-Backend" -- start
+- pm2 logs
+- pm2 list, pm2 flush <name> f
+- pm2 stop <name> ,  pm2 delete <name>
+
+
+
+- Frontend - http://51.20.105.234/
+- Backend -  http://51.20.105.234:3000/
+
+Domain Name  = devtinder.com => 51.20.105.234
+
+Frontend - devtinder.com
+Backend - devtinder.com:3000 => devtinder.com/api
+
+- sudo nano /etc/nginx/sites-available/default
+-  server_name 51.20.105.234;
+-  location /api/ {
+        proxy_pass http://127.0.0.1:3000/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+- after this again restart the nginx server
+- sudo systemctl restart nginx
