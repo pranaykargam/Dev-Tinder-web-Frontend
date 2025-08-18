@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { BASE_URL } from '../utilis/constants';
 import { addFeed, removeUserFromFeed } from '../utilis/feedSlice';
 import UserCard from './UserCard';
-import api from '../utilis/api'; // import the Axios instance
+
 
 
 const Feed = () => {

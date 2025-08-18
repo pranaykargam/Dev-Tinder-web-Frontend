@@ -119,3 +119,4 @@ Backend - devtinder.com:3000 => devtinder.com/api
 
 - after this again restart the nginx server
 - sudo systemctl restart nginx
+- Modify BASE_URL in the frontend projects to /api
