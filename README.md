@@ -86,7 +86,8 @@
 
 - Backend
 
-- allowed ec2 instance public IP on MongoDB Atlas.
+- allowed ec2 instance public IP on MongoDB Atlas.         {optional-> ls,git pull , git log }
+- npm run start      
 - npm i pm2 -g
 - pm2 start npm --name "DevTinder-Backend" -- start
 - pm2 logs
