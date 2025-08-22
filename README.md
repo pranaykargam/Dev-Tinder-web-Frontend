@@ -91,10 +91,9 @@
 
 - cd (/Dev-Tinder-Backend) 
 - npm run start
-
-
 - allowed ec2 instance public IP on MongoDB Atlas.         {optional-> ls,git pull , git log }
-- npm run start      
+- npm run start  
+
 - npm i pm2 -g
 - pm2 start npm --name "DevTinder-Backend" -- start
 - pm2 logs
@@ -102,17 +101,17 @@
 - pm2 stop <name> ,  pm2 delete <name>
 
 
+## nginx Configuration
+- Frontend - http://16.171.7.33/
+- Backend -  http://16.171.7.33:3000/
 
-- Frontend - http://51.20.105.234/
-- Backend -  http://51.20.105.234:3000/
-
-Domain Name  = devtinder.com => 51.20.105.234
+Domain Name  = devtinder.com => 16.171.7.33
 
 Frontend - devtinder.com
 Backend - devtinder.com:3000 => devtinder.com/api
 
 - sudo nano /etc/nginx/sites-available/default
--  server_name 51.20.105.234;
+-  server_name 16.171.7.33/;
 -  location /api/ {
         proxy_pass http://127.0.0.1:3000/;
         proxy_http_version 1.1;
@@ -127,4 +126,10 @@ Backend - devtinder.com:3000 => devtinder.com/api
 
 - after this again restart the nginx server
 - sudo systemctl restart nginx
-- Modify BASE_URL in the frontend projects to /api
+- Modify BASE_URL in the frontend projects to /api (export const BASE_URL = "/api";)
+- after this again run 
+- npm run build
+- sudo scp -r dist/* /var/www/html
+
+- extra (curl -s http://checkip.amazonaws.com) which shows the public IP of your vscode instance
+
