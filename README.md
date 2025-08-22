@@ -58,12 +58,13 @@
 - Launch Instance 
 
 - // this steps are followed in terminal  after {cd Download } in terminal.
-- 01. chmod 400 DevTinder.pem
-- 02. ssh -i "DevTinder.pem" ubuntu@ec2-51-21-224-101.eu-north-1.compute.amazonaws.com
+- 01. chmod 400 devTinder-secret.pem
+- 02. ssh -i "devTinder-secret.pem" ubuntu@ec2-16-171-7-33.eu-north-1.compute.amazonaws.com
 
 - Download Node.js in the terminal by adding the following commands: 
 - 01. curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-- 02. nvm install 22 (this 22 verison in the node.js but we change the version acccording to the project, in my project it was 24.1.0 )
+- 02. exit and then again use ssh to start the machine 
+- 03. nvm install 22 (this 22 verison in the node.js but we change the version acccording to the project, in my project it was 24.1.0 )
 -  we can see the version  by adding node -v in the vsCode terminal.
 
 -  Next git Clone by adding the following commands in the terminal ; 
@@ -73,18 +74,24 @@
 - ls
 - For Frontend
 - cd (/Dev-Tinder-web-Frontend) the name which you have given in the git clone command
+- in the frontend vs code (npm run build) so that dist will be created
 - npm i
 - npm run build
+
 - sudo apt update
 - sudo apt install nginx
 - sudo systemctl start nginx
 - sudo systemctl enable nginx
-- copy code from dist (build files) to  /var/www/html 
+- copy code from dist (build files) to  /var/www/html    -->  if you have to go back then you have to hit cd then cd Dev-Tinder-web-Frontend
 - sudo scp -r dist/* /var/www/html
 
 - Enable port :80 of your instance in the AWS security group
 
 - Backend
+
+- cd (/Dev-Tinder-Backend) 
+- npm run start
+
 
 - allowed ec2 instance public IP on MongoDB Atlas.         {optional-> ls,git pull , git log }
 - npm run start      
