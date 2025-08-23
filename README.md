@@ -132,6 +132,5 @@ Backend - devtinder.com:3000 => devtinder.com/api
 - sudo scp -r dist/* /var/www/html
 
 - extra (curl -s http://checkip.amazonaws.com) which shows the public IP of your vscode instance
-- extra (curl -s http://checkip.amazonaws.com) which shows the public IP of your vscode instance
-- extra (curl -s http://checkip.amazonaws.com) which shows the public IP of your vscode instance- extra (curl -s http://checkip.amazonaws.com) which shows the public IP of your vscode instance
+
 
