@@ -139,6 +139,12 @@ Backend - devtinder.com:3000 => devtinder.com/api
 - change the nameserver in the godaddy to cloudflare nameserver
 - 
 
+## Adding custom domain name
+- purchased domain name from godaddy
+- signup cloudflare & add new domain name
+- change the nameserver in the godaddy to cloudflare nameserver
+- 
+
 
 
 
