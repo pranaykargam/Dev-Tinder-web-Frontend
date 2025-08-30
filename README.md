@@ -143,8 +143,7 @@ Backend - devtinder.com:3000 => devtinder.com/api
 - purchased domain name from godaddy
 - signup cloudflare & add new domain name
 - change the nameserver in the godaddy to cloudflare nameserver
-- and then wait for few hours and then add a record in the cloudflare
-- after the approval it will work in 24 hours
+
 
 
 
