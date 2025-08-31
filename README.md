@@ -145,10 +145,7 @@ Backend - devtinder.com:3000 => devtinder.com/api
 - change the nameserver in the godaddy to cloudflare nameserver
 - then wait for few hours then it will be activate.
 
-- purchased domain name from godaddy
-- signup cloudflare & add new domain name
-- change the nameserver in the godaddy to cloudflare nameserver
-- then wait for few hours then it will be activate.
+
 
 
 
