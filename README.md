@@ -133,17 +133,13 @@ Backend - devtinder.com:3000 => devtinder.com/api
 
 - extra (curl -s http://checkip.amazonaws.com) which shows the public IP of your vscode instance
 
-## Adding custom domain name
-- purchased domain name from godaddy
-- signup cloudflare & add new domain name
-- change the nameserver in the godaddy to cloudflare nameserver
-- 
+
 
 ## Adding custom domain name
 - purchased domain name from godaddy
-- signup cloudflare & add new domain name
-- change the nameserver in the godaddy to cloudflare nameserver
-- then wait for few hours then it will be activate.
+- signup cloudflare & add new domain name properly which is there in the godaddy
+- change the nameserver in the godaddy to cloudflare nameservers which is given in the cloudflare
+- then wait for few minutes  then it will be activate.
 
 
 
