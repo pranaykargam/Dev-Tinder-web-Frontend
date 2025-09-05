@@ -145,6 +145,12 @@ Backend - devtinder.com:3000 => devtinder.com/api
 - then wait for few minutes  then it will be activate.- then wait for few minutes  then it will be activate.
 - then wait for few minutes  then it will be activate.
 
+- A devtinder.us 16.171.7.33 which is DNS record in the cloudflare
+- enable SSL for website in the cloudflare (Flexible)
+
+- A devtinder.us 16.171.7.33 which is DNS record in the cloudflare
+- enable SSL for website in the cloudflare (Flexible)
+
 
 
 
