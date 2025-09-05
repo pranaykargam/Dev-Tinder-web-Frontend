@@ -148,8 +148,20 @@ Backend - devtinder.com:3000 => devtinder.com/api
 - A devtinder.us 16.171.7.33 which is DNS record in the cloudflare
 - enable SSL for website in the cloudflare (Flexible)
 
+## sending Emails via SES (AWS)
 
-
+- Craete IAM user 
+- give access to AmezonSESFullAccess
+- Amezon SES: create an identify
+- verify your domain name
+- verify your email address
+- install AWS SDK - V3    ---> https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/javascriptv3/example_code/ses#code-examples
+- setup SesClinet
+- Access Credentioals should be created in IAM under SecurityCredentials tab.
+- Add the creadentials in your .env file
+- Write code for SESClient
+- Write code for sending email address
+- make the Email dynamic by passing more params to the run fuction.
 
 
 
