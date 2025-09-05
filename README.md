@@ -148,8 +148,7 @@ Backend - devtinder.com:3000 => devtinder.com/api
 - A devtinder.us 16.171.7.33 which is DNS record in the cloudflare
 - enable SSL for website in the cloudflare (Flexible)
 
-- A devtinder.us 16.171.7.33 which is DNS record in the cloudflare
-- enable SSL for website in the cloudflare (Flexible)
+
 
 
 
