@@ -164,6 +164,8 @@ Backend - devtinder.com:3000 => devtinder.com/api
 - make the Email dynamic by passing more params to the run fuction.
 
 
+- Write code for sending email address
+- make the Email dynamic by passing more params to the run fuction.
 
 
 
