@@ -164,6 +164,10 @@ Backend - devtinder.com:3000 => devtinder.com/api
 - make the Email dynamic by passing more params to the run fuction.
 
 
+- npm i node-cron in backend code .
+
+- https://crontab.guru/#10_12_2_6_1 (we can check or practise cron jobs here)
+
 
 
 
