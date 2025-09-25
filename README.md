@@ -163,9 +163,17 @@ Backend - devtinder.com:3000 => devtinder.com/api
 - Write code for sending email address
 - make the Email dynamic by passing more params to the run fuction.
 
+## Scheduling cron jobs
+
 - npm i node-cron in backend code .
 
-<!-- - https://crontab.guru/#10_12_2_6_1 (we can check or practise cron jobs here)  -->
+- https://crontab.guru/#10_12_2_6_1 (we can check or practise cron jobs here) 
+- schedule a job
+- date-fns (for formatting the date)
+- Find all the unique email ID who have got the connection request in the previous day 
+- send email
+- explore queue mechanism to send bulk emails 
+- Amezon SES Bulk emails.
 
 
 
