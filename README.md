@@ -176,10 +176,7 @@ Backend - devtinder.com:3000 => devtinder.com/api
 - Amezon SES Bulk emails.
 
 
-- explore queue mechanism to send bulk emails 
-- Amezon SES Bulk emails.
-- explore queue mechanism to send bulk emails 
-- Amezon SES Bulk emails.
+
 
 
 
