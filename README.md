@@ -175,8 +175,15 @@ Backend - devtinder.com:3000 => devtinder.com/api
 - explore queue mechanism to send bulk emails 
 - Amezon SES Bulk emails.
 
+## Razorpay Payment Gateway  Integration :
 
+- Sign up on  Razorpay & complte KYC
+- Created a UI for Premium page
+- Creating an API for create order in backend 
+- Razorpay Documentation in Nodejs 
+   https://razorpay.com/docs/payments/server-integration/nodejs/?preferred-country=IN
 
+- npm i razorpay in backend.
 
 
 

@@ -113,6 +113,15 @@ text-white shadow-sm">
 </li>
 
 <li>
+  <Link
+    to="/Premium"
+    className="flex items-center  font-serif justify-between px-4 py-2 rounded-lg hover:bg-cyan-900/30 transition-colors duration-200"
+  >
+    Premium
+  </Link>
+</li>
+
+<li>
   <button
     onClick={handleLogout}
     className="w-full text-left px-4 py-2 rounded-lg hover:bg-red-400 transition-colors duration-200"

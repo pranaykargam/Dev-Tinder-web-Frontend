@@ -12,6 +12,7 @@ import Feed from "./Components/Feed";
 import EditProfile from "./Components/EditProfile";
 import Connections from "./Components/Connections.jsx";
 import Requests from "./Components/Requests";
+import Premium from "./Components/Premium.jsx";
 
 
 
@@ -32,6 +33,7 @@ function App() {
   <Route path="/editprofile" element={<EditProfile/>}/>
   <Route path="/Connections"element={<Connections/>}/>
   <Route path="/requests"element={<Requests/>}/>
+  <Route path="/Premium"element={<Premium/>}/>
 
   </Route>
    </Routes>
