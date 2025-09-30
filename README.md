@@ -184,6 +184,7 @@ Backend - devtinder.com:3000 => devtinder.com/api
    https://razorpay.com/docs/payments/server-integration/nodejs/?preferred-country=IN
 
 - npm i razorpay in backend.
+- npm i razorpay in backend.
 
 
 
