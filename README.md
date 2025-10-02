@@ -184,6 +184,21 @@ Backend - devtinder.com:3000 => devtinder.com/api
    https://razorpay.com/docs/payments/server-integration/nodejs/?preferred-country=IN
 
 - npm i razorpay in backend.
+- added my key and secret in the .env file
+- initialize Razorpay in utiles
+- creating order in Razorpay
+- create schema and model (models/payment.js)
+- saved the order in payments collection
+- make the API dynamic 
+- setup Razorpay webhook on yout live API 
+  go to RazorPaayy Dashboard -> Settings -> Webhooks -> Add New Webhook
+ (https://devtinder.us/api/payment/webhook)
+
+ - ref: https://github.com/razorpay/razorpay-node/tree/master/documents
+ - ref: https://razorpay.com/docs/payments/server-integration/php/integration-steps/
+ - ref: https://razorpay.com/docs/webhooks/validate-test/
+ - ref: https://razorpay.com/docs/webhooks/payloads/payments/
+
 
 
 

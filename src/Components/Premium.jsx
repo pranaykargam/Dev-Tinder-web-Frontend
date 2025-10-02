@@ -7,14 +7,37 @@ const Premium = () => {
   const handleBuyClick = async(type) => {
   const order = await axios.post(
     BASE_URL + "/payment/create",{
-        membershipType: type
+        membershipType: type,
     },{withCredentials: true}
   );
-  }
+  
 
   // It should open the Razorpay Dialoge box
 
+  const {amount,keyId,currency,notes,orderId } = order.data;
 
+  const  options = {
+    key:keyId,
+    amount ,
+    currency,
+    name: "Dev Tinder",
+    description: "connect to other developers",
+
+    order_id: orderId, 
+    prefill: {
+        name: notes.firstName + ' ' + notes.lastName,
+        email: notes.emailId,
+        contact: "7680832566",
+    },
+    theme: {
+        color: "#3399cc"
+    },
+};
+
+  const rzp  = new Razorpay(options);
+    rzp.open();
+
+    // rzp.open();
   return (
     <div className="m-10">
     <div className="card bg-base-300 rounded-box grid h-80 place-items-center">
@@ -43,6 +66,6 @@ const Premium = () => {
   </div>
   )
 }
+}
 
 export default Premium
-// export default Premium
