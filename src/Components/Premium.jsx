@@ -37,7 +37,7 @@ const Premium = () => {
   const rzp  = new Razorpay(options);
     rzp.open();
 
-    // rzp.open();
+   
   return (
     <div className="m-10">
     <div className="card bg-base-300 rounded-box grid h-80 place-items-center">
