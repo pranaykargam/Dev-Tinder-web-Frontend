@@ -199,10 +199,7 @@ Backend - devtinder.com:3000 => devtinder.com/api
  - ref: https://razorpay.com/docs/webhooks/validate-test/
  - ref: https://razorpay.com/docs/webhooks/payloads/payments/
 
-  - ref: https://github.com/razorpay/razorpay-node/tree/master/documents
- - ref: https://razorpay.com/docs/payments/server-integration/php/integration-steps/
- - ref: https://razorpay.com/docs/webhooks/validate-test/
- - ref: https://razorpay.com/docs/webhooks/payloads/payments/
+ 
 
 
 
