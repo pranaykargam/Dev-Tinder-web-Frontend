@@ -199,7 +199,13 @@ Backend - devtinder.com:3000 => devtinder.com/api
  - ref: https://razorpay.com/docs/webhooks/validate-test/
  - ref: https://razorpay.com/docs/webhooks/payloads/payments/
 
- 
+ ## Real time chat using websockets (socket.io)
+
+ - https://socket.io/docs/v4/
+
+ - build the UI for chat box /chat/:targetUserId
+ - set up socket.io in backend
+ - npm i socket.io 
 
 
 

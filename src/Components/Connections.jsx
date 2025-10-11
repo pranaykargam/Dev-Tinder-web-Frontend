@@ -6,7 +6,7 @@ import { BASE_URL } from '../utilis/constants'
 import { addConnections } from '../utilis/connectionsSlice'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 
@@ -45,9 +45,6 @@ if (!connections) {
     
   }
   
- 
-
-
 
   return (
 
@@ -61,6 +58,7 @@ if (!connections) {
   <div className="grid gap-1  ">
   {connections.map((connection) => {
     const { _id, firstName, lastName, photoUrl, about,age ,gender} = connection;
+
 
     return (
       <div key={_id}
@@ -98,6 +96,12 @@ if (!connections) {
 
 </div>
 
+{/* // Chat Button */}
+    <Link to = {"/chat/" + _id} >
+      <button className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-4 py-2 rounded-lg transition">
+         Chat
+      </button>
+    </Link>
 
       </div>
     );

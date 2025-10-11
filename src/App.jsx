@@ -13,6 +13,7 @@ import EditProfile from "./Components/EditProfile";
 import Connections from "./Components/Connections.jsx";
 import Requests from "./Components/Requests";
 import Premium from "./Components/Premium.jsx";
+import Chat from "./Components/Chat.jsx";
 
 
 
@@ -34,6 +35,7 @@ function App() {
   <Route path="/Connections"element={<Connections/>}/>
   <Route path="/requests"element={<Requests/>}/>
   <Route path="/Premium"element={<Premium/>}/>
+  <Route path="/chat"element={<Chat/>}/>
 
   </Route>
    </Routes>
