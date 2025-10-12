@@ -204,14 +204,18 @@ Backend - devtinder.com:3000 => devtinder.com/api
  - https://socket.io/docs/v4/
 
  - build the UI for chat box /chat/:targetUserId
+ - craete new file  (chat.jsx) in frontend
  - set up socket.io in backend
  - npm i socket.io 
+ - https://socket.io/docs/v4/
+ - set up socket.js in backend and also merge it in the app.js file
 
-  - https://socket.io/docs/v4/
+  < npm i socket.io-client in frontend
+  < create a file socket.jsx in utils
 
- - build the UI for chat box /chat/:targetUserId
- - set up socket.io in backend
- - npm i socket.io 
+ 
+
+
 
 
 
