@@ -213,6 +213,9 @@ Backend - devtinder.com:3000 => devtinder.com/api
   < npm i socket.io-client in frontend
   < create a file socket.jsx in utils
 
+    < npm i socket.io-client in frontend
+  < create a file socket.jsx in utils
+
  
 
 
