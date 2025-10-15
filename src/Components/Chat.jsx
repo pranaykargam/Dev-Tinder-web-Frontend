@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { createSocketConnection } from '../utilis/socket';
+import { BASE_URL } from '../utilis/constants';
 
 
 const Chat = () => {
@@ -10,6 +11,23 @@ const Chat = () => {
     const [newMessage,setNewMessage] = useState ("");
     const user  = useSelector((store) => store.user); // this gives logged in user details from redux store
     const userId = user?._id; 
+
+    const fetchChatMessages = async() => {
+        const chat  = await axios.get(BASE_URL + "/chat/" + targetUserId,{
+            withCredentials: true,
+        })
+        console.log(chat.data.messages);
+    
+
+    //    const chatMessages = chat?.data?.messages.map((msg) => {
+    //     return{
+    //         firstName:msg?.firstName,
+    //         lastName:msg?.lastName,
+    //         text: msg.text,
+    //     },
+    //    );
+    //    };
+    
 
      useEffect(() => {
         if(!userId ) {
@@ -54,7 +72,7 @@ const sendMessage = () => {
                    return (
             <div key = {index} className="chat chat-start">
               <div className="chat-header">
-                 {msg.firstName}
+                {`${msg.firstName} ${msg.lastName}`}
               <time className="text-xs opacity-50">2 hours ago</time>
               </div>
              <div className="chat-bubble">{msg.text}</div>
