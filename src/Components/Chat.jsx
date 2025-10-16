@@ -19,14 +19,16 @@ const Chat = () => {
         console.log(chat.data.messages);
     
 
-    //    const chatMessages = chat?.data?.messages.map((msg) => {
-    //     return{
-    //         firstName:msg?.firstName,
-    //         lastName:msg?.lastName,
-    //         text: msg.text,
-    //     },
-    //    );
-    //    };
+       const chatMessages = chat?.data?.messages.map((msg) => {
+        const {senderId, text} = msg;
+        return{
+            firstName: senderId?. firstName,
+            lastName: senderId?. lastName,
+            text: text,
+        };
+    });
+    setMessages(chatMessages);
+       };
     
 
      useEffect(() => {
@@ -51,6 +53,7 @@ const sendMessage = () => {
     const socket = createSocketConnection();
     socket.emit("message", {
         firstName: user.firstName,
+        lastName: user.lastName,
         userId,
         targetUserId,
         text: newMessage,
@@ -58,9 +61,9 @@ const sendMessage = () => {
     };
 
     // to listen to the messageReceived event from the server 
-    socket.on("messageReceived", ({firstName, text}) => {
+    socket.on("messageReceived", ({firstName,lastName, text}) => {
         console.log(firstName + ": " + text);
-        setMessages((messages)=> [...messages, {firstName, text}]);
+        setMessages((messages)=> [...messages, {firstName,lastName, text}]);
     })
 
 

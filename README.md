@@ -210,10 +210,11 @@ Backend - devtinder.com:3000 => devtinder.com/api
  - https://socket.io/docs/v4/
  - set up socket.js in backend and also merge it in the app.js file
 
-  <!-- < npm i socket.io-client in frontend
-  < create a file socket.jsx in utils -->
+  < npm i socket.io-client in frontend
+  < create a file socket.jsx in utils
 
-
+=> improving the UI of chat box
+=> showing green signal when user is online and also the last seen[2 hours ago...]
 
  
 
