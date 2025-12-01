@@ -32,6 +32,14 @@ useEffect(() => {
     fetchConnections()
 },  [])
 
+useEffect(() => {
+  fetchConnections()
+},  [])
+
+useEffect(() => {
+  fetchConnections()
+},  [])
+
 if (!connections) {
     return <h1 className="font-serif text-xl">Loading...</h1>;
   }
@@ -113,4 +121,13 @@ if (!connections) {
   )
 }
 
-export default Connections
+export default Connections;
+
+
+
+
+
+
+
+
+
