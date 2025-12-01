@@ -32,13 +32,7 @@ useEffect(() => {
     fetchConnections()
 },  [])
 
-useEffect(() => {
-  fetchConnections()
-},  [])
 
-useEffect(() => {
-  fetchConnections()
-},  [])
 
 if (!connections) {
     return <h1 className="font-serif text-xl">Loading...</h1>;
