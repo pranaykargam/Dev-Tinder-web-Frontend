@@ -8,9 +8,7 @@ export const createSocketConnection = () => {
     } else {
         return io("/" ,{path: "/api/socket.io"} );
     }
-    // else {
-    //     return io("/" ,{path: "/api/socket.io"} );
-    // }
+  
 }
 
 
