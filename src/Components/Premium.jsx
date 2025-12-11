@@ -71,11 +71,5 @@ const Premium = () => {
 export default Premium
 // export default Premium
 
-// export default Premium
-// export default Premium
-// export default Premium
-// export default Premium
-// export default Premium
-// export default Premium
-// export default Premium
+
 
