@@ -14,15 +14,16 @@ const Premium = () => {
 
   // It should open the Razorpay Dialoge box
 
-  const {amount,keyId,currency,notes,orderId } = order.data;
+  const {amount,keyId,currency,notes,orderId} = order.data;
 
   const  options = {
+
     key:keyId,
     amount ,
     currency,
     name: "Dev Tinder",
     description: "connect to other developers",
-
+    
     order_id: orderId, 
     prefill: {
         name: notes.firstName + ' ' + notes.lastName,
