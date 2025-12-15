@@ -96,19 +96,7 @@ const sendMessage = () => {
 }
 
 export default Chat;
-// export default Chat;
-// export default Chat;
-// export default Chat;
-// export default Chat;
 
-// export default Chat;
-// export default Chat;
-
-// export default Chat;
-// export default Chat;
-// export default Chat;
-// export default Chat;
-// export default Chat;
 
 
 
