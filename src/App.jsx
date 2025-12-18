@@ -3,10 +3,10 @@ import NavBar from "./Components/NavBar";
 import Body from "./Components/Body";
 import Login from "./Components/Login";
 
-import Profile from "./Components/Profile.jsx"
+import Profile from "./Components/Profile.jsx";
 
 import Footer from "./Components/Footer";
-import {Provider} from "react-redux";
+import { Provider } from "react-redux";
 import appStore from "./utilis/appStore";
 import Feed from "./Components/Feed";
 import EditProfile from "./Components/EditProfile";
@@ -15,43 +15,27 @@ import Requests from "./Components/Requests";
 import Premium from "./Components/Premium.jsx";
 import Chat from "./Components/Chat.jsx";
 
-
-
-
-
 function App() {
- 
   return (
-    
-   <>
-   <Provider store = {appStore}>
-   <BrowserRouter basename="/">
-   <Routes>
-  <Route path="/" element = {<Body/>}>
-  <Route path="/" element={<Feed/>}/>
-  <Route path="/login" element={<Login/>}/>
-  <Route path="/profile" element={<Profile/>}/>
-  <Route path="/editprofile" element={<EditProfile/>}/>
-  <Route path="/Connections"element={<Connections/>}/>
-  <Route path="/requests"element={<Requests/>}/>
-  <Route path="/Premium"element={<Premium/>}/>
-  <Route path="/chat"element={<Chat/>}/>
-
-  </Route>
-   </Routes>
-   </BrowserRouter>
-   </Provider>
-  
-   
-  </>
-  )
+    <>
+      <Provider store={appStore}>
+        <BrowserRouter basename="/">
+          <Routes>
+            <Route path="/" element={<Body />}>
+              <Route path="/" element={<Feed />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/editprofile" element={<EditProfile />} />
+              <Route path="/Connections" element={<Connections />} />
+              <Route path="/requests" element={<Requests />} />
+              <Route path="/Premium" element={<Premium />} />
+              <Route path="/chat" element={<Chat />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </Provider>
+    </>
+  );
 }
-     
-      
-  
 
-
-export default App
-
-
-
+export default App;

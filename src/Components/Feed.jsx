@@ -1,11 +1,9 @@
-import axios from 'axios';
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { BASE_URL } from '../utilis/constants';
-import { addFeed, removeUserFromFeed } from '../utilis/feedSlice';
-import UserCard from './UserCard';
-
-
+import axios from "axios";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { BASE_URL } from "../utilis/constants";
+import { addFeed, removeUserFromFeed } from "../utilis/feedSlice";
+import UserCard from "./UserCard";
 
 const Feed = () => {
   const feed = useSelector((store) => store.feed);
@@ -24,7 +22,11 @@ const Feed = () => {
   const handleInterested = async (userId) => {
     try {
       // Update backend
-      await axios.post( BASE_URL/connection/interested/userId , {}, { withCredentials: true });
+      await axios.post(
+        BASE_URL / connection / interested / userId,
+        {},
+        { withCredentials: true }
+      );
 
       // Remove from Redux
       dispatch(removeUserFromFeed({ _id: userId }));
@@ -36,7 +38,11 @@ const Feed = () => {
   const handleIgnore = async (userId) => {
     try {
       // Optional backend call for ignoring
-      await axios.post(BASE_URL/connection/ignore/userId , {}, { withCredentials: true });
+      await axios.post(
+        BASE_URL / connection / ignore / userId,
+        {},
+        { withCredentials: true }
+      );
 
       // Remove from Redux
       dispatch(removeUserFromFeed({ _id: userId }));
@@ -49,10 +55,14 @@ const Feed = () => {
     getFeed();
   }, []);
 
-    // If feed is empty after loading
-    if (!feed || feed.length === 0) {
-      return <h1 className="text-center text-xl font-semibold mt-10">No new users found!!!</h1>;
-    }
+  // If feed is empty after loading
+  if (!feed || feed.length === 0) {
+    return (
+      <h1 className="text-center text-xl font-semibold mt-10">
+        No new users found!!!
+      </h1>
+    );
+  }
 
   const currentUser = feed?.[0]; // Always show first user
 

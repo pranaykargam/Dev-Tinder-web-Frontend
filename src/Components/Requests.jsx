@@ -1,52 +1,46 @@
-import React, { use } from 'react'
-import { useEffect } from 'react'
-import axios from 'axios'
-import { BASE_URL } from '../utilis/constants'
-import { useDispatch } from 'react-redux'
-import { useSelector } from 'react-redux'
-import { addRequests } from '../utilis/requestSlice'
-
-
+import React, { use } from "react";
+import { useEffect } from "react";
+import axios from "axios";
+import { BASE_URL } from "../utilis/constants";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { addRequests } from "../utilis/requestSlice";
 
 const Requests = () => {
-  const requests = useSelector(store => store.requests)
-  const dispatch = useDispatch()
+  const requests = useSelector((store) => store.requests);
+  const dispatch = useDispatch();
 
-  const reviewRequest= async(status,_id) => {
-    try{
-       const res =  await axios.post(
+  const reviewRequest = async (status, _id) => {
+    try {
+      const res = await axios.post(
         BASE_URL + "/request/review/" + status + "/" + _id,
         {},
-        { withCredentials: true },
-   
-   
-       )
-       console.log("Review request response:", res.data); 
-       fetchRequests()
-    }catch(err){
+        { withCredentials: true }
+      );
+      console.log("Review request response:", res.data);
+      fetchRequests();
+    } catch (err) {
       console.error("ERROR");
     }
-  }
+  };
 
   const fetchRequests = async () => {
     try {
       const res = await axios.get(BASE_URL + "/user/requests/received", {
         withCredentials: true,
-        
-     
-      })
-      console.log("Fetched requests data:", res.data.data); 
-      dispatch(addRequests(res.data.data)) // ✅ Store data in Redux
+      });
+      console.log("Fetched requests data:", res.data.data);
+      dispatch(addRequests(res.data.data)); // ✅ Store data in Redux
     } catch (err) {
-      console.error("ERROR", err)
+      console.error("ERROR", err);
     }
-  }
+  };
 
   useEffect(() => {
-    fetchRequests()
-  }, [])
+    fetchRequests();
+  }, []);
 
-  if (!requests) return
+  if (!requests) return;
   if (requests.length === 0) {
     return (
       <h1 className="font-serif text-lg text-gray-300 tracking-wide">
@@ -55,21 +49,20 @@ const Requests = () => {
     );
   }
   return (
+    <div className=" mx-auto  text-center my-10 ">
+      <h1 className="font-serif text-3xl  gap-1tracking-wide text-center text-white drop-shadow-md mb-6">
+        Requests
+      </h1>
 
+      <div className="grid gap-1  ">
+        {requests.map((request) => {
+          const { _id, firstName, lastName, photoUrl, about, age, gender } =
+            request.fromUserId;
 
-<div className=" mx-auto  text-center my-10 ">
-<h1 className="font-serif text-3xl  gap-1tracking-wide text-center text-white drop-shadow-md mb-6">
-  Requests
-</h1>
-
-
-  <div className="grid gap-1  ">
-  {requests.map((request) => {
-    const { _id, firstName, lastName, photoUrl, about,age ,gender} = request.fromUserId;
-
-    return (
-      <div key={_id}
-      className="
+          return (
+            <div
+              key={_id}
+              className="
       flex items-center justify-between
       bg-gradient-to-r from-[#1e293b] via-[#0f172a] to-[#020617]
       shadow-lg shadow-cyan-500/10 hover:shadow-xl hover:shadow-cyan-400/20
@@ -84,38 +77,43 @@ const Requests = () => {
       transform hover:-translate-y-1 hover:scale-[1.02]
       text-white 
     "
-      >
-        {/* Left side - Profile Image */}
-        <img
-          alt={`${firstName} ${lastName}`}
-          className="w-16 h-16 rounded-full object-cover border-2 border-indigo-200"
-          src={photoUrl || "https://via.placeholder.com/150"}
-        />
+            >
+              {/* Left side - Profile Image */}
+              <img
+                alt={`${firstName} ${lastName}`}
+                className="w-16 h-16 rounded-full object-cover border-2 border-indigo-200"
+                src={photoUrl || "https://via.placeholder.com/150"}
+              />
 
-        {/* Right side - Details */}
-        <div className="ml-4 flex flex-col">
-  <h2 className="text-xl font-serif bg-gradient-to-r from-purple-400 via-pink-400 to-orange-300 bg-clip-text text-transparent drop-shadow-md tracking-wide">
-    {firstName} {lastName}
-  </h2>
+              {/* Right side - Details */}
+              <div className="ml-4 flex flex-col">
+                <h2 className="text-xl font-serif bg-gradient-to-r from-purple-400 via-pink-400 to-orange-300 bg-clip-text text-transparent drop-shadow-md tracking-wide">
+                  {firstName} {lastName}
+                </h2>
 
-  { age&& gender && <p>{age + " " + gender}</p> }
-  <p className="text-xs text-gray-300 "> {about}</p>
-</div>
-<div className="flex gap-2">
-  <button className="btn btn-success btn-sm rounded-full shadow-md hover:shadow-lg transition" onClick={()=>reviewRequest("accepted", request._id) }> 
-    Accept 
-    </button>
-  <button className="btn btn-error btn-sm rounded-full shadow-md hover:shadow-lg transition" onClick={()=>reviewRequest("rejected", request._id) }>
-    Reject
-  </button>
-</div>
-
+                {age && gender && <p>{age + " " + gender}</p>}
+                <p className="text-xs text-gray-300 "> {about}</p>
+              </div>
+              <div className="flex gap-2">
+                <button
+                  className="btn btn-success btn-sm rounded-full shadow-md hover:shadow-lg transition"
+                  onClick={() => reviewRequest("accepted", request._id)}
+                >
+                  Accept
+                </button>
+                <button
+                  className="btn btn-error btn-sm rounded-full shadow-md hover:shadow-lg transition"
+                  onClick={() => reviewRequest("rejected", request._id)}
+                >
+                  Reject
+                </button>
+              </div>
+            </div>
+          );
+        })}
       </div>
-    );
-  })}
-</div>
-</div>
-  )
-}
+    </div>
+  );
+};
 
-export default Requests
+export default Requests;
