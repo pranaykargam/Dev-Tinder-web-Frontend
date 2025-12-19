@@ -17,9 +17,7 @@ const Chat = () => {
     });
     console.log(chat.data.messages);
 
-    useEffect(() => {
-        fetchChatMessages();
-        }, []);
+
 
     const chatMessages = chat?.data?.messages.map((msg) => {
       const { senderId, text } = msg;
@@ -31,6 +29,11 @@ const Chat = () => {
     });
     setMessages(chatMessages);
   };
+
+
+  useEffect(() => {
+    fetchChatMessages();
+    }, []);
 
   useEffect(() => {
     if (!userId) {
