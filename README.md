@@ -223,9 +223,7 @@ Backend - devtinder.com:3000 => devtinder.com/api
        or 
      (curl ipinfo.io/ip)
 
- (curl ifconfig.me)
-       or 
-     (curl ipinfo.io/ip)
+
 
 
 
