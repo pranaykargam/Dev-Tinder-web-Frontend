@@ -217,7 +217,12 @@ Backend - devtinder.com:3000 => devtinder.com/api
 => showing green signal when user is online and also the last seen[2 hours ago...]
 
 
- 
+ ==>> Check public (internet) IP address
+
+     (curl ifconfig.me)
+       or 
+     (curl ipinfo.io/ip)
+
 
 
 
